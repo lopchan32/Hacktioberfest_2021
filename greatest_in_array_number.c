@@ -1,25 +1,23 @@
 #include <stdio.h>
 int main()
 {
-    int a;
+    int a,b,i,j;
+    int num[100];
+    
     printf("Enter a number you want the loop of: ");
     scanf("%d", &a);
 
-    int num[a];
-
-    int b;
-
-    for (int i = 0; i <= a; i++)
+    for (i = 0; i < a; i++)
     {
         printf("Enter a number: ");
         scanf("%d", &num[i]);
     }
 
-    for (int i = 0; i <= a; ++i)
+    for (i = 0; i <= a; i++)
     {
-        for (int j = i + 1; j <= a; ++j)
+        for (j = i + 1; j <= a; j++)
         {
-            if (num[i] > num[j])
+            if (num[i] < num[j])
             {
                 b = num[i];
                 num[i] = num[j];
@@ -27,10 +25,11 @@ int main()
             }
         }
     }
-
-    for (int i = 0; i <= a; i++)
+    
+    printf("The Sorted Elements are : \n ");
+    for (i = 0; i < a; i++)
     {
-        printf("the arranged number are: %d\n", num[i]);
+        printf("%d ", num[i]);
     }
     
 
