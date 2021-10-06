@@ -2,7 +2,8 @@
 int main()
 {
     printf("The first 10 even number are: ");
-    for (int i = 1; i <= 10; i++)
+    
+    for (int i = 1; i <= 20; i++)
     {
         if (i % 2 == 0)
         {
@@ -10,4 +11,4 @@ int main()
         }
     }
     return 0;
-}sni
+}
